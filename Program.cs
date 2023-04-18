@@ -1,5 +1,6 @@
 ﻿using BasicFunctionPrograms.FlipCoin;
 using BasicFunctionPrograms.LeapYear;
+using BasicFunctionPrograms.PrimeFactors;
 
 namespace BasicFunctionPrograms
 {
@@ -10,7 +11,7 @@ namespace BasicFunctionPrograms
             Console.WriteLine("Welcome to Basic Functional Programs");
 
             Console.WriteLine("Please choose a 1 program from below List");
-            Console.WriteLine("1.FlipCoin\n2.LeapYear");
+            Console.WriteLine("1.FlipCoin\n2.LeapYear\n3.PrimeFactor");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option) 
@@ -26,6 +27,16 @@ namespace BasicFunctionPrograms
                     CheckLeapYear checkLeapYear = new CheckLeapYear();
                     checkLeapYear.CheckLP(year);
                 break;
+                case 3:
+                    Console.Write("Please enter the number to find its prime factors: ");
+                    int n = int.Parse(Console.ReadLine());
+
+                    Primefact primefact = new Primefact();
+                    primefact.Pf(n);
+
+                    Console.ReadKey();
+                    break;
+
             
             }
         }
