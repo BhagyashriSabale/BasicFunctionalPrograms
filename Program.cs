@@ -1,6 +1,7 @@
 ﻿using BasicFunctionPrograms.FlipCoin;
 using BasicFunctionPrograms.LeapYear;
 using BasicFunctionPrograms.PrimeFactors;
+using BasicFunctionPrograms.QuotientandRemainder;
 
 namespace BasicFunctionPrograms
 {
@@ -11,7 +12,7 @@ namespace BasicFunctionPrograms
             Console.WriteLine("Welcome to Basic Functional Programs");
 
             Console.WriteLine("Please choose a 1 program from below List");
-            Console.WriteLine("1.FlipCoin\n2.LeapYear\n3.PrimeFactor");
+            Console.WriteLine("1.FlipCoin\n2.LeapYear\n3.PrimeFactor\n4.QuotientandRemainder");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option) 
@@ -35,7 +36,17 @@ namespace BasicFunctionPrograms
                     primefact.Pf(n);
 
                     Console.ReadKey();
-                    break;
+                break;
+                case 4:
+                    Console.Write("Please enter Divident: ");
+                    int dividend = int.Parse(Console.ReadLine());
+
+                    Console.Write("Please enter Divisor: ");
+                    int divisor = int.Parse(Console.ReadLine());
+
+                    QR qr = new QR();
+                    qr.Quorem(dividend,divisor);
+                break;
 
             
             }
