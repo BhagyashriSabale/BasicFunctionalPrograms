@@ -2,6 +2,7 @@
 using BasicFunctionPrograms.LeapYear;
 using BasicFunctionPrograms.PrimeFactors;
 using BasicFunctionPrograms.QuotientandRemainder;
+using BasicFunctionPrograms.SwapNumber;
 
 namespace BasicFunctionPrograms
 {
@@ -12,7 +13,7 @@ namespace BasicFunctionPrograms
             Console.WriteLine("Welcome to Basic Functional Programs");
 
             Console.WriteLine("Please choose a 1 program from below List");
-            Console.WriteLine("1.FlipCoin\n2.LeapYear\n3.PrimeFactor\n4.QuotientandRemainder");
+            Console.WriteLine("1.FlipCoin\n2.LeapYear\n3.PrimeFactor\n4.QuotientandRemainder\n5.SwapNumbers");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option) 
@@ -47,6 +48,22 @@ namespace BasicFunctionPrograms
                     QR qr = new QR();
                     qr.Quorem(dividend,divisor);
                 break;
+                case 5:
+                    //take user input
+                    Console.WriteLine("Please a number a: ");
+                    int a = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Please enter number b: ");
+                    int b = int.Parse(Console.ReadLine());
+
+                    // create object of class and inherit their properties
+                    Swapnum swapnum = new Swapnum();
+                    swapnum.Swap(ref a, ref b);
+
+                    //print swapping numbers
+                    Console.WriteLine("After Swapping: ");
+                    Console.WriteLine("a: {0}", a);
+                    Console.WriteLine("b: {0}", b);
+                    break;
 
             
             }
