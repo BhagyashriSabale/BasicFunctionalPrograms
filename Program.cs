@@ -4,6 +4,7 @@ using BasicFunctionPrograms.LeapYear;
 using BasicFunctionPrograms.PrimeFactors;
 using BasicFunctionPrograms.QuotientandRemainder;
 using BasicFunctionPrograms.SwapNumber;
+using BasicFunctionPrograms.VowelorConstant;
 
 namespace BasicFunctionPrograms
 {
@@ -14,7 +15,7 @@ namespace BasicFunctionPrograms
             Console.WriteLine("Welcome to Basic Functional Programs");
 
             Console.WriteLine("Please choose a 1 program from below List");
-            Console.WriteLine("1.FlipCoin\n2.LeapYear\n3.PrimeFactor\n4.QuotientandRemainder\n5.SwapNumbers\n6.EvenOddS");
+            Console.WriteLine("1.FlipCoin\n2.LeapYear\n3.PrimeFactor\n4.QuotientandRemainder\n5.SwapNumbers\n6.EvenOddS\n7.VowelorConstant");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option) 
@@ -73,6 +74,22 @@ namespace BasicFunctionPrograms
                     string result = evodd.Check();
 
                     Console.WriteLine(result);
+               break;
+                case 7:
+                    Console.Write("Enter a character: ");
+                    char c = Console.ReadKey().KeyChar;
+
+                    bool isVowel = Vc.IsVowel(c);
+                    if (isVowel)
+                    {
+                        Console.WriteLine("\nThe character '{0}' is a vowel", c);
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nThe character '{0}' is a consonant", c);
+                    }
+
+                    Console.ReadLine();
                     break;
 
             
