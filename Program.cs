@@ -1,5 +1,6 @@
 ﻿using BasicFunctionPrograms.EvenOdd;
 using BasicFunctionPrograms.FlipCoin;
+using BasicFunctionPrograms.LargestNumber;
 using BasicFunctionPrograms.LeapYear;
 using BasicFunctionPrograms.PrimeFactors;
 using BasicFunctionPrograms.QuotientandRemainder;
@@ -15,7 +16,7 @@ namespace BasicFunctionPrograms
             Console.WriteLine("Welcome to Basic Functional Programs");
 
             Console.WriteLine("Please choose a 1 program from below List");
-            Console.WriteLine("1.FlipCoin\n2.LeapYear\n3.PrimeFactor\n4.QuotientandRemainder\n5.SwapNumbers\n6.EvenOddS\n7.VowelorConstant");
+            Console.WriteLine("1.FlipCoin\n2.LeapYear\n3.PrimeFactor\n4.QuotientandRemainder\n5.SwapNumbers\n6.EvenOddS\n7.VowelorConstant\n8.LargestNum");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option) 
@@ -89,6 +90,18 @@ namespace BasicFunctionPrograms
                         Console.WriteLine("\nThe character '{0}' is a consonant", c);
                     }
 
+
+                    Console.ReadLine();
+                    break;
+                case 8:
+                    Console.Write("Enter three numbers: ");
+                    int num1 = int.Parse(Console.ReadLine());
+                    int num2 = int.Parse(Console.ReadLine());
+                    int num3 = int.Parse(Console.ReadLine());
+
+                    int largest = Ln.FindLargestNum(num1, num2, num3);
+
+                    Console.WriteLine("Largest number is: {0}", largest);
                     Console.ReadLine();
                     break;
 
